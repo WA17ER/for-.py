@@ -1,12 +1,25 @@
-pribyl = int(input('введите прибыль фирмы '))
-izderjki = int(input('Укажите издержки'))
-workers = int(input('укажите число сотрудников'))
-profit = pribyl - izderjki
-profit_at_workers = profit / workers
+a = [9, 6, 2, 1, ]
+i = int(input("Введите число: "))
+g = [i, ]
+x = 0
 
-if profit > 0 :
-    print(f'Фирма отработала с выгодой {profit}.Рентабильность сотавила {profit/pribyl} . Доход на каждого работника {profit_at_workers}')
-elif profit < 0 :
-    print(f"фирма понесла убытки {profit}")
-else :
-    print('фирма не получила дохода ,но и не понесла убытков')
+if i in a:
+    a.insert((a.index(i)+1), i)
+else:
+    for u in a:
+        if g[x] < u > i:
+            g.insert(x, u)
+            x += 1
+        elif g[x] >= u <= i:
+            g.insert(x+1, u)
+            x += 1
+
+    a = g
+print(a)
+
+# через sort
+
+a.append(i)
+a.sort()
+a.reverse()
+print(a)

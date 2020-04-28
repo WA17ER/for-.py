@@ -1,10 +1,3 @@
-print(type(11))
-n = '124'
-a = 'stroka'
-c = 14.8
-g =  0 > 1
-print(type(n))
-print(type(a))
-print(type(c))
-print(type(g))
-print(g)
+c = ['слоав',1,14 > 15, 14.5]
+for i in c:
+    print(type(i))

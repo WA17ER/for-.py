@@ -1,6 +1,16 @@
-time = int(input("Ведите время в секундах"))
-sec = time % 60
-min = time // 60
-hour = time // 360
-full_time = f'{hour}:{min}:{sec}'
-print(full_time)
+a = []
+l = int(input('Введите число '))
+i = 0
+
+while len(a) < l:
+    b = input('введите значение')
+    a.append(b)
+if l // 2 == 0:
+    while i < len(a):
+        a[i], a[i + 1] = a[i + 1], a[i]
+        i += 2
+else:
+    while i < len(a) - 1:
+        a[i], a[i + 1] = a[i + 1], a[i]
+        i += 2
+print(a)
