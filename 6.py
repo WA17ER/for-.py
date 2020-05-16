@@ -1,6 +1,16 @@
-def int_func(some_text):
-    updated_text = some_text.title()
-    print(updated_text)
+from itertools import count
+from itertools import cycle
 
+for step in count(0, 60):
+    if step > 1000:
+        break
+    else:
+        print(step)
 
-int_func(input("Введите текст "))
+gen = 0
+
+for data in cycle("Рандоиная строка"):
+    if gen > 60:
+        break
+    print(data)
+    gen += 1

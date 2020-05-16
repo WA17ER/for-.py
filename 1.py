@@ -1,9 +1,5 @@
-def delenie(var_1, var_2):
-    try:
-        return var_1 / var_2
-    except ZeroDivisionError:
-        print('Деление на 0')
+from sys import argv
 
-
-chasnoe = delenie(int(input("Введите делимое")), int(input('Введите дилитель')))
-print(chasnoe)
+hour, rate, bonus = argv[1:]
+result = int(hour) * int(rate) + float(bonus)
+print(result)
