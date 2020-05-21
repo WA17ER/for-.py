@@ -1,1 +1,9 @@
-print(list(i for i in range(20, 240) if i % 20 == 0 or i % 21 == 0))
+with open('zp.txt') as file:
+    total = []
+    lines = file.readlines()
+    for line in lines:
+        name, zp = line.split(' - ')
+        total.append(int(zp))
+        if int(zp) < 20000:
+            print(line, end='')
+    print('\nСредняя зп:', sum(total) / len(total))

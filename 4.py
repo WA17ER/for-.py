@@ -1,3 +1,16 @@
-new_list = [1, 2, 3, 7, 8, 15, 2, 5, 1, 7]
-alter_list = [numb for numb in new_list if new_list.count(numb) <2]
-print(alter_list)
+with open('eng.txt', encoding='Windows-1251') as file:
+     lines = file.readlines()
+print(lines)
+
+
+with open('translate.txt', 'w', encoding='utf-8') as file:
+    for line in lines:
+        if '1' in line:
+            line = line.replace('One', 'Один')
+        elif '2' in line:
+            line = line.replace('Two', 'Два')
+        elif '3' in line:
+            line = line.replace('Three', 'Три')
+        elif '4' in line:
+            line = line.replace('Four', 'Четыре')
+        file.write(line)

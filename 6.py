@@ -1,16 +1,9 @@
-from itertools import count
-from itertools import cycle
-
-for step in count(0, 60):
-    if step > 1000:
-        break
-    else:
-        print(step)
-
-gen = 0
-
-for data in cycle("Рандоиная строка"):
-    if gen > 60:
-        break
-    print(data)
-    gen += 1
+lesson ={}
+with open('6.txt') as f:
+    lines = f.readlines()
+    for line in lines:
+        data = line.split()
+        subject = data[0]
+        sum_lessons = sum([int(x[:x.find('(')]) for x in data[1:] if '(' in x])
+        lesson[subject] = sum_lessons
+print(lesson)

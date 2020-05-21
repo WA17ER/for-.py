@@ -1,14 +1,7 @@
-from functools import reduce
-
-
-def func1(num1, num2):
-    return num1 * num2
-
-
-result = [el for el in range(10, 101, 10)]
-print(reduce(func1, result))
-
-#Указанные в дз числа
-
-result = [el for el in range(100, 1001, 2)]
-print(reduce(func1, result))
+with open('5.txt', 'w') as file:
+    value = input('Введите целые числа через пробел: ')
+    file.write('Введенные числа: ' + value + '\n')
+    value = map(int, value.split())
+    sum_val = sum(value)
+    file.write('Сумма чисел: ' + str(sum_val))
+print('Сумма введенных чисел:', sum_val)

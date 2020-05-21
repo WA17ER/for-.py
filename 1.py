@@ -1,5 +1,6 @@
-from sys import argv
-
-hour, rate, bonus = argv[1:]
-result = int(hour) * int(rate) + float(bonus)
-print(result)
+with open('new.txt', 'w') as file:
+    while True:
+        line = input('ВВедите строку: ')
+        if line == '':
+            break
+        file.write(line + '\n')

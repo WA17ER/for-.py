@@ -1,4 +1,5 @@
-def_list = [1,3,5,7,8,3,9]
-num = int(input('введите число'))
-new_list = [num + num for num in def_list]
-print(new_list)
+with open('new.txt') as file:
+    lines = file.readlines()
+    print('Количество строк:', len(lines))
+    for num_line, line in enumerate(lines, start=1):
+        print(f'{num_line} строка содержит - {len(line.split())} слов')
