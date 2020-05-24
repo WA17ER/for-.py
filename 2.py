@@ -1,5 +1,11 @@
-with open('new.txt') as file:
-    lines = file.readlines()
-    print('Количество строк:', len(lines))
-    for num_line, line in enumerate(lines, start=1):
-        print(f'{num_line} строка содержит - {len(line.split())} слов')
+class Road():
+    def __init__(self,length, width):
+        self.__length = length
+        self.__width = width
+
+    def count(self):
+        print(self.__length * self.__width *5)
+
+
+data = Road(100, 5)
+data.count()

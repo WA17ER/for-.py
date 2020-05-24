@@ -1,16 +1,52 @@
-with open('eng.txt', encoding='Windows-1251') as file:
-     lines = file.readlines()
-print(lines)
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print(f'{self.name} начало движения')
+
+    def stop(self):
+        print(f'{self.name} остановка')
+
+    def turn(self, direction):
+        print(f'{self.name} поворот на  {self.name ,direction}!')
+
+    def show_speed(self):
+        print('Скорость равна: ',self.speed)
 
 
-with open('translate.txt', 'w', encoding='utf-8') as file:
-    for line in lines:
-        if '1' in line:
-            line = line.replace('One', 'Один')
-        elif '2' in line:
-            line = line.replace('Two', 'Два')
-        elif '3' in line:
-            line = line.replace('Three', 'Три')
-        elif '4' in line:
-            line = line.replace('Four', 'Четыре')
-        file.write(line)
+class TownCar(Car):
+    def show_speed(self):
+        super().show_speed()
+        if self.speed > 60:
+            print('Предупреждение ! Сбавьте скорость')
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        print('Current speed:', self.speed)
+        if self.speed > 40:
+            print('Предупреждение ! Сбавьте скорость')
+
+
+class PoliceCar(Car):
+    pass
+
+
+sport_car = SportCar(180, "чёрная", 'Спортивная машина', False)
+town_car = TownCar(140, 'белая', 'машина для города', False)
+work_car = WorkCar(90, 'Желтая', 'спец средство', False)
+police_car = PoliceCar(120, 'Синяя', 'Полиция', True)
+
+sport_car.show_speed()
+town_car.show_speed()
+work_car.show_speed()
+police_car.show_speed()
+town_car.turn('Право')

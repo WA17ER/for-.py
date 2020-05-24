@@ -1,7 +1,21 @@
-with open('5.txt', 'w') as file:
-    value = input('Введите целые числа через пробел: ')
-    file.write('Введенные числа: ' + value + '\n')
-    value = map(int, value.split())
-    sum_val = sum(value)
-    file.write('Сумма чисел: ' + str(sum_val))
-print('Сумма введенных чисел:', sum_val)
+class Stationery:
+    def __init__(self, title):
+        self.title = title
+
+    def draw(self):
+        print('Выбор инструмента')
+
+
+class Pen(Stationery):
+    def draw(self):
+        print('Используется ручка')
+
+
+class Pencil(Stationery):
+    def draw(self):
+        print('используется карандаш')
+
+
+class Handle(Stationery):
+    def draw(self):
+        print('используется маркер')
