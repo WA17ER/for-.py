@@ -11,4 +11,3 @@ class cloth():
 
 new_coth = cloth(15, 10)
 print(new_coth.total_size)
-

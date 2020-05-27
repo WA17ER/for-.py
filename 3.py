@@ -1,3 +1,4 @@
+
 class  Cell():
     def __init__(self,val):
         self.val = val
@@ -42,6 +43,3 @@ print(f'результат вычитания клеток {cell_1 - cell_2}')
 print(f'результат умножения клеток {cell_1 * cell_2}')
 print(f'результат деления  клеток {cell_1 / cell_2}')
 print(cell_1.make_order(5))
-
-
-
