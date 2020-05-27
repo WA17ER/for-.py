@@ -1,11 +1,14 @@
-class Road():
-    def __init__(self,length, width):
-        self.__length = length
-        self.__width = width
+class cloth():
+    def __init__(self, V, H):
+        self.H = H
+        self.V = V
 
-    def count(self):
-        print(self.__length * self.__width *5)
+    @property
+    def total_size(self):
+        total_size = (self.V / 6.5 + 0.5) + (2 * self.H + 0.3)
+        return total_size
 
 
-data = Road(100, 5)
-data.count()
+new_coth = cloth(15, 10)
+print(new_coth.total_size)
+
